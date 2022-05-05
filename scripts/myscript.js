@@ -1,5 +1,4 @@
-//Con esto miro lo que el usuario a puesto en la caja de búsqueda y lo mostramos.
-const formulario = document.querySelector('#formulario');
+
 
 const botonEs = document.querySelector('#btnEspana');
 const botonAm = document.querySelector('#btnAmerica');
@@ -115,3 +114,36 @@ const mostrarFran = () => {
 
     document.getElementById("demo").innerHTML = text3; //Envío al documento los nombres de las tiendas en América   
 }
+
+
+//Con esto miro lo que el usuario a puesto en la caja de búsqueda y lo mostramos.
+const formulario = document.querySelector('#formulario');
+
+
+const filtrar = () => {
+
+    const texto4 = formulario.ariaValueMax.toLowerCase();
+
+    switch (texto4) {
+
+        case mostrarEsp():
+
+        for(let tndEsp of tiendasEsp){
+            let nombre = tndEsp.nombre.toLowerCase();
+            if(nombre.indexOf(texto4) !== -1) {
+                
+                document.getElementById("demo").innerHTML = nombre;
+            }
+
+            else {
+                document.getElementById("demo").innerHTML = "No ha habido resultados :(";
+            }
+
+        }
+        break;
+
+    }
+}
+
+formulario.addEventListener('keyup', filtrar);
+filtrar();
