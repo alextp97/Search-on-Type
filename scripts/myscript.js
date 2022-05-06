@@ -1,6 +1,6 @@
 
 
-const botonEs = document.querySelector('#btnEspana');
+/*const botonEs = document.querySelector('#btnEspana');
 const botonAm = document.querySelector('#btnAmerica');
 const botonFr = document.querySelector('#btnFrancia');
 
@@ -115,14 +115,30 @@ const mostrarFran = () => {
     document.getElementById("demo").innerHTML = text3; //Envío al documento los nombres de las tiendas en América   
 }
 
+ 
+ 
 
 //Con esto miro lo que el usuario a puesto en la caja de búsqueda y lo mostramos.
-const formulario = document.querySelector('#formulario');
 
+document.addEventListener("keyup", e => {
+    if(e.target.matches("#formulario")) {
+
+        console.log(document.querySelectorAll("#btnEspana"));
+        document.querySelectorAll("#demo").forEach( articulo => {
+            articulo.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+        
+        })
+    }
+
+});
 
 const filtrar = () => {
 
+    let formulario = document.getElementById("formulario");
+    formulario.addEventListener("keyup", filtrar);
     const texto4 = formulario.ariaValueMax.toLowerCase();
+
+    console.log(document.getElementById("demo"));
 
     switch (texto4) {
 
@@ -145,5 +161,87 @@ const filtrar = () => {
     }
 }
 
-formulario.addEventListener('keyup', filtrar);
-filtrar();
+
+
+
+
+filtrar();*/
+  
+
+//document.getElementById("espana").style.display = "none";
+
+
+document.addEventListener("keyup", e=>{
+
+    if (e.target.matches("#buscador")){
+  
+        if (e.key ==="Escape")e.target.value = ""
+  
+        document.querySelectorAll(".tienda").forEach(fruta =>{
+  
+            fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+              ?fruta.classList.remove("filtro")
+              :fruta.classList.add("filtro")
+        })
+  
+    }
+  
+  
+  });
+  //div = document.getElementsByClassName('espana');
+  //div.style.display = 'none';
+
+
+const mostrarEsp = () => {
+
+    let a = document.getElementById("america");
+    a.style.display = "none";
+
+    let f = document.getElementById("francia");
+    f.style.display = "none";
+
+
+
+    let x = document.getElementById("espana");
+    if(x.style.display === "none") {
+        x.style.display = "block";
+    }else {
+        x.style.display = "none";
+    }
+}
+
+const mostrarAme = () => {
+
+    let e = document.getElementById("espana");
+    e.style.display = "none";
+
+    let f = document.getElementById("francia");
+    f.style.display = "none";
+
+
+
+    let x = document.getElementById("america");
+    if(x.style.display === "none") {
+        x.style.display = "block";
+    }else {
+        x.style.display = "none";
+    }
+}
+
+const mostrarFran = () => {
+
+    let a = document.getElementById("america");
+    a.style.display = "none";
+
+    let e = document.getElementById("espana");
+    e.style.display = "none";
+
+
+
+    let x = document.getElementById("francia");
+    if(x.style.display === "none") {
+        x.style.display = "block";
+    }else {
+        x.style.display = "none";
+    }
+}
