@@ -13,24 +13,19 @@
     <script src="scripts\myscript.js"></script>
 
     <div class="container">
-        <h1>Buscador</h1>
 
-       <!-- <button class="btn btn-info" id="btnEspana" onclick="mostrarEsp()">España</button>
-        <button class="btn btn-info" id="btnAmerica" onclick="mostrarAme()">América del Norte</button>
-        <button class="btn btn-info" id="btnFrancia" onclick="mostrarFran()">Francia</button>
-        <input type="text" id="formulario" class="form-control" placeholder="Buscar...">
+        <h1>Buscador de tiendas en tres sitios diferentes</h1>
 
-
-
-        <p id="demo"></p>-->
-
-        <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
-
+        <!--Botones para mostrar u ocultar las tiendas de ropa en los diferentes sitios-->
         <button class="btn btn-info" id="btnEspana" onclick="mostrarEsp()">España</button>
         <button class="btn btn-info" id="btnAmerica" onclick="mostrarAme()">América del Norte</button>
         <button class="btn btn-info" id="btnFrancia" onclick="mostrarFran()">Francia</button>
 
+        <!--Caja de búsqueda-->
+        <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
 
+        
+        <!--Div que contiene una lista con algunas tiendas de ropa en España-->
         <div id="espana" style="display: none">
             <ul id="listaTiendas">
                 <li class="tienda">Zara</li>
@@ -54,7 +49,7 @@
             </ul>
         </div>
 
-       
+       <!--Div que contiene una lista con algunas tiendas de ropa en America-->
         <div id="america" style="display: none">
             <ul id="listaTiendas">
                 <li class="tienda">Victoria´s Secret</li>
@@ -78,6 +73,7 @@
             </ul>
         </div>
 
+        <!--Div que contiene una lista con algunas tiendas de ropa en Francia-->
         <div id="francia" style="display: none">
             <ul id="listaTiendas">
                 <li class="tienda">La Vallée Village</li>
@@ -102,11 +98,7 @@
             </ul>
         </div>
 
-
-
-    </div>
-
-    
+    </div>    
     
 </body>
 </html>
