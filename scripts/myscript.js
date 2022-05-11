@@ -42,6 +42,7 @@ const mostrarAme = () => {
     }
 }
 
+//Esta función permite al usuario mostrar y ocultar las tiendas de ropa de Francia
 const mostrarFran = () => {
 
     //Si la tabla de las tiendas de america está activa, se oculta para que salgan solo las tiendas de francia
