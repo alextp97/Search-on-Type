@@ -13,14 +13,28 @@
     <!--Añado la ruta del script-->
     <script src="scripts\myscript.js"></script>
 
-    <button class="btn btn-info" id="btnEspana" onclick="showShopSpain()">España</button>
-    <button class="btn btn-info" id="btnAmerica" onclick="showShopAmerica()">América del Norte</button>
-    <button class="btn btn-info" id="btnFrancia" onclick="showShopFrance()">Francia</button>
-    <input type="search" class="form-control" id="searchShop" placeholder="Buscar..." onkeyup="filterList()">
+    <div id="content">
+        <h1>Buscador de Tiendas </h1>
 
-   <ul id="list">
+        <div class="buttons">
+            <button class="btn btn-info" id="btnEspana" onclick="showShopSpain()">España</button>
+            <button class="btn btn-info" id="btnAmerica" onclick="showShopAmerica()">América del Norte</button>
+            <button class="btn btn-info" id="btnFrancia" onclick="showShopFrance()">Francia</button>
+        </div>
+
+         <input type="search" class="form-control" id="searchShop" placeholder="Buscar..." onkeyup="filterList()">
         
-   </ul> 
+            
+    
+    
+        <div class="shops">
+
+            <ul id="list"></ul> 
+        </div>
+
+        
+    </div>
+    
     
 </body>
 </html>

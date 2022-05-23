@@ -103,19 +103,25 @@ function showShopFrance() {
 
  
 
-//Con esto miro lo que el usuario a puesto en la caja de búsqueda y lo mostramos.
+//Funcion que compara lo que el usuario ha introducido en el input y lo que hay en
+//los elementos <li></li>
 function filterList() {
     
+    //Convierto el valor del input a minúscula y lo asigno a la variable input
     let input = document.getElementById("searchShop").value.toLowerCase();
+
     let ul = document.getElementById("list");
     let li = ul.getElementsByTagName("li");
 
 
+    //Con este bucle miro el número total de elementos <li></li> que hay almacenados
     for(i = 0; i < li.length; i++){
-        let span = li[i].getElementsByTagName("span")[0];
-        let txtValue = span.textContent;
+
+        let span = li[i].getElementsByTagName("span")[0]; //Miro por cada etiqueta li su correspondiente etiqueta span
+        let txtValue = span.textContent; //Obtengo el valor del span y lo guardo en la variable
         
 
+        //Si el valor del span coincide con lo que el usuario ha introducido en el input lo muestro 
         if(txtValue.toLowerCase().indexOf(input) > -1){
             li[i].style.display = "";
         }
