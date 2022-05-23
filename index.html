@@ -13,93 +13,14 @@
     <!--Añado la ruta del script-->
     <script src="scripts\myscript.js"></script>
 
-    <div class="container">
+    <button class="btn btn-info" id="btnEspana" onclick="showShopSpain()">España</button>
+    <button class="btn btn-info" id="btnAmerica" onclick="showShopAmerica()">América del Norte</button>
+    <button class="btn btn-info" id="btnFrancia" onclick="showShopFrance()">Francia</button>
+    <input type="search" class="form-control" id="searchShop" placeholder="Buscar..." onkeyup="filterList()">
 
-        <h1>Buscador de tiendas de ropa</h1>
-
-        <!--Botones para mostrar u ocultar las tiendas de ropa en los diferentes sitios-->
-        <button class="btn btn-info" id="btnEspana" onclick="mostrarEsp()">España</button>
-        <button class="btn btn-info" id="btnAmerica" onclick="mostrarAme()">América del Norte</button>
-        <button class="btn btn-info" id="btnFrancia" onclick="mostrarFran()">Francia</button>
-
-        <!--Caja de búsqueda-->
-        <input type="text" name="buscador" class="form-control" id="buscador" placeholder="Buscar...">
-
+   <ul id="list">
         
-        <!--Div que contiene una lista con algunas tiendas de ropa en España-->
-        <div id="espana" style="display: none">
-            <ul id="listaTiendas">
-                <li class="tienda">Zara</li>
-                <li class="tienda">Inside</li>
-                <li class="tienda">Stradivarius</li>
-                <li class="tienda">Outlet</li>
-                <li class="tienda">Carrefour</li>
-                <li class="tienda">El Corte Inglés</li>
-                <li class="tienda">Modas Paqui</li>
-                <li class="tienda">Calzados América</li>
-                <li class="tienda">La Boutique de la abuela Lola</li>
-                <li class="tienda">Sprinter</li>
-                <li class="tienda">Ropa Pilar Prieto</li>
-                <li class="tienda">Spagnolo</li>
-                <li class="tienda">La Coste</li>
-                <li class="tienda">Sfera</li>
-                <li class="tienda">Silbon</li>
-                <li class="tienda">Bershka</li>
-                <li class="tienda">H&M</li>
-                <li class="tienda">Primark</li>
-            </ul>
-        </div>
-
-       <!--Div que contiene una lista con algunas tiendas de ropa en America-->
-        <div id="america" style="display: none">
-            <ul id="listaTiendas">
-                <li class="tienda">Victoria´s Secret</li>
-                <li class="tienda">Old Navy</li>
-                <li class="tienda">Macy´s</li>
-                <li class="tienda">Forever 21</li>
-                <li class="tienda">Nordstrom</li>
-                <li class="tienda">Lululemon Athletica</li>
-                <li class="tienda">Topshop</li>
-                <li class="tienda">Neiman Marcus</li>
-                <li class="tienda">Dillard´s</li>
-                <li class="tienda">J.Crew</li>
-                <li class="tienda">Zara</li>
-                <li class="tienda">H&M</li>
-                <li class="tienda">Banana Republic</li>
-                <li class="tienda">Urban Outfitters</li>
-                <li class="tienda">Prada</li>
-                <li class="tienda">Gucci</li>
-                <li class="tienda">Rossamour</li>
-                <li class="tienda">Amazon</li>
-            </ul>
-        </div>
-
-        <!--Div que contiene una lista con algunas tiendas de ropa en Francia-->
-        <div id="francia" style="display: none">
-            <ul id="listaTiendas">
-                <li class="tienda">La Vallée Village</li>
-                <li class="tienda">One Nation Paris</li>
-                <li class="tienda">Marques Avenue A6</li>
-                <li class="tienda">La Piscine Paris</li>
-                <li class="tienda">The Kooples</li>
-                <li class="tienda">Sandro</li>
-                <li class="tienda">Iro</li>
-                <li class="tienda">A.P.C</li>
-                <li class="tienda">Maje</li>
-                <li class="tienda">Zadig & Voltaire</li>
-                <li class="tienda">Isabel Marant</li>
-                <li class="tienda">Ba&sh</li>
-                <li class="tienda">Comptoir des Cotonniers</li>
-                <li class="tienda">Sessùn</li>
-                <li class="tienda">Prada</li>
-                <li class="tienda">Gucci</li>
-                <li class="tienda">Rossamour</li>
-                <li class="tienda">eBay</li>
-
-            </ul>
-        </div>
-
-    </div>    
+   </ul> 
     
 </body>
 </html>

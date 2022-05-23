@@ -1,82 +1,126 @@
 
+//Array que contiene el nombre de las tiendas en España
+const shopSpain = [
+    { name: 'Zara'},
+    { name: 'Inside'},
+    { name: 'Stradivarius'},
+    { name: 'Outlet'},
+    { name: 'Carrefour'},
+    { name: 'El Corte Inglés'},
+    { name: 'Modas Paqui'},
+    { name: 'Calzados América'},
+    { name: 'La Boutique de la abuela Lola'},
+    { name: 'Sprinter'},
+    { name: 'Ropa Pilar Prieto'},
+    { name: 'Mi Bandera de España'},
+    { name: 'La Coste'},
+    { name: 'Sfera'},
+    { name: 'Silbon'},
+    { name: 'Bershka'},
+    { name: 'H&M'},
+    { name: 'Primark'},
+];
 
-//Esta función permite al usuario mostrar y ocultar las tiendas de ropa de España
-const mostrarEsp = () => {
+//Función que se ejecuta cuando el usuario pulsa sobre el botón de España
+//Muestra las tiendas en España
+function showShopSpain() {
+    let list = shopSpain.map( function ( shopE ){
+        return "<li><span>" + shopE.name + "</span></li>";
+    })
+    .join("");
+    document.getElementById("list").innerHTML = list;
+}   
 
-    //Si la tabla de las tiendas de américa está activa, se oculta para que salgan solo las tiendas de españa
-    let a = document.getElementById("america");
-    a.style.display = "none";
 
-    //Si la tabla de las tiendas de francia está activa, se oculta para que salgan solo las tiendas de españa
-    let f = document.getElementById("francia");
-    f.style.display = "none";
+//Array que contiene el nombre de las tiendas en América
+const shopsAme = [
+    { name: 'Victoria´s Secret'},
+    { name: 'Old Navy'},
+    { name: 'Macy´s'},
+    { name: 'Forever 21'},
+    { name: 'Nordstrom'},
+    { name: 'Lululemon Athletica'},
+    { name: 'Topshop'},
+    { name: 'Neiman Marcus'},
+    { name: 'Dillard´s'},
+    { name: 'J.Crew'},
+    { name: 'Zara'},
+    { name: 'H&M'},
+    { name: 'Banana Republic'},
+    { name: 'Urban Outfitters'},
+    { name: 'Prada'},
+    { name: 'Gucci'},
+    { name: 'Rossamour'},
+    { name: 'Amazon'},
+];
 
-
-    //Almaceno el id del elemento cuyo id es espana y dependiendo de si está activo o no, se muestra o se oculta
-    let x = document.getElementById("espana");
-    if(x.style.display === "none") { //Si está oculto
-        x.style.display = "block"; //Entonces se activa
-    }else {
-        x.style.display = "none"; //Si el usuario pulsa el botón de España y la lista está activa, entonces se oculta
-    }
+//Función que se ejecuta cuando el usuario pulsa sobre el botón de América
+//Muestra las tiendas que hay en América
+function showShopAmerica() {
+    let list = shopsAme
+    .map( function ( shopA ){
+        return "<li><span>" + shopA.name + "</span></li>";
+    })
+    .join("");
+    document.getElementById("list").innerHTML = list;
 }
 
-//Esta función permite al usuario mostrar y ocultar las tiendas de ropa de América
-const mostrarAme = () => {
-
-    //Si la tabla de las tiendas de españa está activa, se oculta para que salgan solo las tiendas de america
-    let e = document.getElementById("espana");
-    e.style.display = "none";
-
-    //Si la tabla de las tiendas de francia está activa, se oculta para que salgan solo las tiendas de america
-    let f = document.getElementById("francia");
-    f.style.display = "none";
 
 
-    //Almaceno el id del elemento cuyo id es america y dependiendo de si está activo o no, se muestran o se ocultan sus elementos
-    let x = document.getElementById("america");
-    if(x.style.display === "none") { //Si está oculto
-        x.style.display = "block";  //Entonces se muestra
-    }else {
-        x.style.display = "none"; //Si está activo pero el usuario pulsa otra vez el boton de América, entonces se oculta sus elementos
-    }
+//Array que contiene el nombre de las tiendas en Francia
+const shopsFrance = [
+    { name: 'La Vallée Village'},
+    { name: 'One Nation Paris'},
+    { name: 'Marques Avenue A6'},
+    { name: 'La Piscine Paris'},
+    { name: 'The Kooples'},
+    { name: 'Sandro'},
+    { name: 'Iro'},
+    { name: 'A.P.C'},
+    { name: 'Maje'},
+    { name: 'Zadig & Voltaire'},
+    { name: 'Isabel Marant'},
+    { name: 'Ba&sh'},
+    { name: 'Comptoir des Cotonniers'},
+    { name: 'Sessùn'},
+    { name: 'Prada'},
+    { name: 'Gucci'},
+    { name: 'Rossamour'},
+    { name: 'eBay'},
+];
+
+//Función que se ejecuta cuando el usuario pulsa sobre el botón de Francia
+//Muestra las tiendas en Francia
+function showShopFrance() {
+    let list = shopsFrance
+    .map( function ( shopF ){
+        return "<li><span>" + shopF.name + "</span></li>";
+    })
+    .join("");
+    document.getElementById("list").innerHTML = list;
 }
 
-const mostrarFran = () => {
+ 
 
-    //Si la tabla de las tiendas de america está activa, se oculta para que salgan solo las tiendas de francia
-    let a = document.getElementById("america");
-    a.style.display = "none";
-
-    //Si la tabla de las tiendas de españa está activa, se oculta para que salgan solo las tiendas de francia
-    let e = document.getElementById("espana");
-    e.style.display = "none";
-
-
-    //Almaceno el id del elemento cuyo id es francia y dependiendo de si está activo o no, se muestran o se ocultan sus elementos
-    let x = document.getElementById("francia");
-    if(x.style.display === "none") { //Si está oculto
-        x.style.display = "block"; //Entonces se muestra
-    }else {
-        x.style.display = "none"; //Si está activo pero el usuario pulsa otra vez el botón de Francia, se ocultan los elementos
-    }
-}
-
-
-//Aquí creo una función flecha que a su vez tiene el addEventListener
-//Este evento recoge cuando el usuario pulsa una tecla dentro de la barra de búsqueda y la pasa al parámetro e
-document.addEventListener("keyup", e=>{
-
-    if (e.target.matches("#buscador")){ //Si el parámetro coincide con lo que hay puesto en el buscado, entonces sigue ejecutandose el programa
-     
-        //Selecciono todas las etiquetas cuya clase es .tienda y están activas en ese momento
-        document.querySelectorAll(".tienda").forEach(tienda =>{ //Con un bucle for each recorro todos los registros que haya en la lista actual de tiendas
-  
-            tienda.textContent.toLowerCase().includes(e.target.value.toLowerCase()) //Compruebo que los valores coinciden
-              ?tienda.classList.remove("filtro") //Si coincide lo que el usuario mete con lo que hay en las tablas, quito la clase filtro
-              :tienda.classList.add("filtro") //Si no coincide añado la clase filtro
-        });
-  
-    }
+//Con esto miro lo que el usuario a puesto en la caja de búsqueda y lo mostramos.
+function filterList() {
     
-});
+    let input = document.getElementById("searchShop").value.toLowerCase();
+    let ul = document.getElementById("list");
+    let li = ul.getElementsByTagName("li");
+
+
+    for(i = 0; i < li.length; i++){
+        let span = li[i].getElementsByTagName("span")[0];
+        let txtValue = span.textContent;
+        
+
+        if(txtValue.toLowerCase().indexOf(input) > -1){
+            li[i].style.display = "";
+        }
+        else {
+            li[i].style.display = "none";
+        }
+
+    }
+}
