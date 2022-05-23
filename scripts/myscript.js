@@ -54,6 +54,7 @@ const shopsAme = [
     { name: 'Amazon'},
 ];
 
+
 //Función que se ejecuta cuando el usuario pulsa sobre el botón de América
 //Muestra las tiendas que hay en América
 function showShopAmerica() {
