@@ -24,9 +24,10 @@ const shopSpain = [
 //Función que se ejecuta cuando el usuario pulsa sobre el botón de España
 //Muestra las tiendas en España
 function showShopSpain() {
-    let list = shopSpain.map( function ( shopE ){
-        return "<li><span>" + shopE.name + "</span></li>";
-    })
+    let list = shopSpain.map(( shopE ) =>
+        // return "<li><span>" + shopE.name + "</span></li>";
+         `<li><span>${shopE.name}</span></li>`
+    )
     .join("");
     document.getElementById("list").innerHTML = list;
 }   
